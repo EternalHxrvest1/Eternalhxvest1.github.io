@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
+:root{
+    --color1: #efd889;
+    --color2: #e78182;
+    --color3: #95e1d3;
+}
+header{
+    background: -webkit-linear-gradient(180deg, rgb(231, 129, 130, 0.9), rgb(239, 217, 137, 0.9)), url(../img/Layer15.png);
+    background: -moz-linear-gradient(180deg, rgb(231, 129, 130, 0.9), rgb(239, 217, 137, 0.9)), url(../img/Layer15.png);
+    background: linear-gradient(180deg, rgb(231, 129, 130, 0.9), rgb(239, 217, 137, 0.9)), url(../img/Layer15.png);
+    background-size: cover;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    height: 100vh;
+    overflow: hidden;
+}
+.navbar-brand{
+    font-family: "Montserrat";
+    font-weight: 900;
+    font-size: 30px;
+    color: white;
+    transition: 0.2s;
+}
+.navbar-brand:hover{
+    transition: 0.2s;
+    color: var(--color1);
+}
+.mynav{
+    justify-content: space-between !important;
+}
+.navbar-collapse{
+    justify-content: end;
+}
+.nav-link{
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 14px;
+    color: white !important;
+    position: relative;
+}
+.nav-link:hover{
+    color: var(--color1);
+}
+.nav-link::before {
+    content: ''; /* добавляем содержимое в псевдоэлемент */
+    position: absolute; /* устанавливаем абсолютное позиционирование */
+    bottom: 0; /* располагаем линию внизу */
+    left: 0; /* располагаем линию в середине по горизонтали */
+    width: 0; /* устанавливаем начальную ширину линии */
+    height: 2px; /* устанавливаем высоту линии */
+    background-color: var(--color1); /* устанавливаем цвет линии */
+    transition: width 0.3s ease-out, left 0.3s ease-out; /* добавляем плавный эффект появления линии */
+    transform: translateX(-50%); /* смещаем псевдоэлемент влево на половину его ширины */
+}
+.nav-link:hover::before {
+    width: 100%; /* увеличиваем ширину линии до 100% */
+    left: 50%; /* смещаем линию влево на 50% */
+}
+.carousel-item1{
+    text-align: center;
+}
+.title1{
+    font-size: 72px;
+    font-family: "Kaushan Script";
+    color: rgb(255, 255, 255); 
+}
+.title2{
+    font-size: 150px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 140px;
+}
+.line{
+    margin: 40px 0 53px;
+    height: 2px;
+    width: 60px;
+    background-color: white;
+}
+.btn-learn-more{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 13px 30px;
+    border: 2px solid;
+    transition: 0.3s;
+}
+.btn-learn-more:hover{
+    color: var(--color1);
+    transition: 0.3s;
+}
+.carousel1, .carousel-inner1{
+    height: 85vh;
+}
+.carousel-indicators1 [data-bs-target]{
+    width: 23%;
+}
+.carousel-indicators1 .active{
+    opacity: 1;
+    background-color: var(--color2);
+}
+.mycarousel{
+    overflow: hidden;
+}
+.element1 h2{
+    padding-top: 90px;
+    font-size: 24px;
+    font-family: "Kaushan Script";
+    color: rgb(51, 51, 51);
+}
+.element1 p{
+    font-size: 30px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+}
+.line2{
+    margin: 40px 0 53px;
+    height: 2px;
+    width: 60px;
+    background-color: var(--color2);
+}
+.story-text{
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    padding-bottom: 90px;
+}
+.custom-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-overlay:hover .overlay {
+    opacity: 1;
+}
+.collapsed{
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.accordion-button:focus{
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    box-shadow: none;
+    color: currentColor;
+}   
+.accordion-button:not(.collapsed){
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    background-color: unset;
+    color: currentColor;
+}
+.accordion-body{
+    font-size: 15px;
+    font-family: "Roboto";
+    font-weight: lighter;
+    color: rgb(153, 153, 153);
+    font-style: italic;
+}
+.accordion-button i{
+    color: var(--color3);
+    font-size: 30px;
+    padding-right: 5px;
+}
+.imgs1 img{
+    width: 100%;
+}
+.imgs2 img{
+    width: 100%;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: linear-gradient(180deg, rgb(231, 129, 130, 0.9), rgb(239, 217, 137, 0.9));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+.overlay i{
+    font-size: 24px;
+}
+.overlay h6{
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+.overlay p{
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+    font-style: italic;
+}
+.story-images{
+    padding-bottom: 110px;
+}
+.service-card1{
+    border-bottom: solid 1px #e5e5e5;
+}
+.nums{
+    background-color: #95e1d3;
+}
+.nums-inner{
+    
+    padding: 90px 0 ;
+}
+.nums_inner h3{
+    font-size: 72px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.nums_inner p{
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+.service-card{
+    padding: 50px 0 50px;
+}
+.service-card i{
+    font-size: 31px;
+    padding-right: 31px;
+    color: var(--color3);
+}
+.service-card-text h3{
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+}
+.service-card-text p{
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    text-align: left;
+}
+.bgdesign{
+    background-image: url(../img/Layer45.png);
+    background-size: cover;
+}
+.whiteline{
+    width: 100%;
+    height: 5vh;
+    background-color: white;
+    overflow: hidden;
+}
+.accrd{
+    padding-bottom: 5vh;
+}
+.slider{
+    background-color: #f8f8f8;
+}
+.carousel-item2{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 70%;
+    padding: 70px 0 70px;
+}
+.carousel-item2 i{
+    align-self: center;
+    font-size: 70px;
+    color: var(--color3);
+    padding: 25px 42px 25px;
+    border: solid var(--color3);
+}
+.carousel-text{
+    padding-left: 60px;
+}
+.carousel-text p{
+    font-size: 24px;
+    font-family: "Kaushan Script";
+    color: rgb(51, 51, 51);
+    margin: 0;
+}
+.carousel-text h4{
+    font-size: 24px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    font-style: italic;
+    text-align: left;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+.carousel-control-next-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(270deg);
+}
+.carousel-control-prev-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(90deg);
+}
+.line3{
+    align-self: center;
+    height: 2px;
+    width: 60px;
+    background-color: var(--color2);
+    margin-right: 10px;
+}
+.a123{
+    padding-top: 25px;
+    display: flex;
+}
+.socials {
+    background-color: var(--color1);
+    height: 12%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.social {
+    height: 100%;
+    width: 25%;
+    background-color: var(--color1);
+    transition: 0.3s;
+    border-left: 1px solid var(--color2);
+    border-right: 1px solid var(--color2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social a{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    transition: 0.3s;
+}
+.social i{
+    color: var(--color2);
+}
+.social:hover{
+    background-color: var(--color2);
+}
+.social:hover i{
+    color: var(--color1);
+    transition: 0.3s;
+}
+.socials-text h5{
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+}
+.socials-text p{
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    font-style: italic;
+}
+.sponsors{
+    background-color: #f8f8f8;
+}
+.imgs2{
+    padding: 0;
+}
+.carousel-item2 img{
+    height: 100%;
+}
+.peoplecards{
+    display: flex;
+    padding-bottom: 50px;
+}
+.peoplecards img{
+    height: 100%;
+    padding-right: 20px;
+}
+.peoplecards h1{
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.peoplecards h2{
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(51, 51, 51);
+    font-style: italic;
+    padding-bottom: 5px;
+}
+.peoplecards p{
+    padding-top: 10px;
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+}
+.card-a{
+    text-decoration: none;
+}
+.blog-text h1{
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.blog-cards{
+    position: relative;
+}
+.blog-cards img{
+    width: 100%;
+}
+.blog-date{
+    width: 60px;
+    height: 70px;
+    background-color: var(--color3);
+    position: absolute;
+    bottom: 10px;
+    left: -10px;
+}
+.blog-date h1{
+    padding-top: 12px;
+    font-size: 30px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 25px;
+    margin: 0 auto;
+}
+.blog-date p{
+    font-size: 20px;
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    line-height: 25px;
+    margin: 0 auto;
+}
+.blog-text p{
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    padding-bottom: 20px;
+    border-bottom: solid 1px #e5e5e5;
+}
+.blog-feedback{
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    font-style: italic;
+}
+.blog-feedback i {
+    padding-right: 10px;
+    color: var(--color3);
+}
+.views{
+    padding-right: 20px;
+}
+footer{
+    background-color: #f5f4f4;
+}
+.footer1 h1{
+    padding-top: 75px;
+    font-size: 35px;
+    font-family: "Montserrat";
+    color: #c0c0c0;
+    font-weight: bold;
+}
+.footer1 p{
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+}
+.footer1 h2{
+    font-size: 18px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #c0c0c0;
+}
+.footer1 h3{
+    padding-top: 10px;
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    font-style: italic;
+}
+.footer1 i{
+    color: var(--color3);
+    padding-left: 18px;
+    font-size: 20px
+}
+.email{
+    display: flex;
+    padding-bottom: 69px;
+    border-bottom: solid 1px #c0c0c0;
+}
+.form-control{
+    width: 50%;
+    border-radius: 0;
+}
+.btn-primary{
+    font-size: 12px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0;
+    background-color: var(--color3);
+    border-color: var(--color3);
+    transition: 0.2;
+}
+.btn-primary:hover{
+    border-color: #6da59b;
+    background-color: #6da59b;
+    transition: 0.2;
+}
+.footer2{
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 75px;
+}
+.blogs-inner img{
+    height: 100%;
+}
+.blogs-inner-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    text-decoration: none;
+}
+.blogs-inner h2{
+  font-size: 12px;
+  font-family: "Montserrat";
+  color: rgb(51, 51, 51);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.blogs-inner p{
+    font-size: 13px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    font-style: italic;
+    text-align: left;
+    margin: 0  ;
+}
+.inst-img{
+    padding: 1px;
+}
+.inst-link{
+    font-size: 13px;
+    font-family: "Roboto";
+    color: rgb(51, 51, 51);
+    font-style: italic;
+    text-decoration: none;
+}
+.form-control:focus{
+    box-shadow: none;
+    border-color: var(--color3);
+}
+@media (max-width: 1400px){
+    .title2{
+        font-size: 100px;
+        line-height: 90px;
+    }
+    .title1{
+        font-size: 46px;
+    }
+}
+@media (max-width: 993px){
+    .title2{
+        font-size: 70px;
+        line-height: 60px;
+    }
+    .title1{
+        font-size: 46px;
+    }
+}
+@media (max-width: 767px){
+    .iphone{
+        display: none;
+    }
+}
+@media (max-width: 650px){
+    .title2{
+        font-size: 50px;
+        line-height: 40px;
+    }
+    .title1{
+        font-size: 42px;
+    }
+}
